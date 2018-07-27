@@ -2,24 +2,30 @@
   <title>rede-hike</title>
 </head>
 
-<body>
-  <h1>Bem vindxs à Hike!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="inicio">
+  <h1>Conecte-se com o mundo.</h1>
+  <p>Veja fotos e status das pessoas que você segue.</p>
+  <p>Compartilhe as novidades no seu perfil.</p>
+  <p>Siga seus amigos e pessoas ao redor do mundo.</p>
+  <p><a href="#">Link</a></p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="sobre">
+  <h1>Sobre</h1>
+
+  <h2>Nossa visão</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis leo sem. Cras ullamcorper hendrerit augue et lobortis. Morbi facilisis ac lacus eget pellentesque. Sed auctor tortor vel lorem maximus porttitor. Sed pretium ipsum at diam placerat, quis tristique metus venenatis. Aliquam consectetur mattis tincidunt. Praesent tincidunt risus quis leo ornare dapibus. Etiam aliquam risus et lacus congue, sit amet convallis risus faucibus. Etiam eget neque in neque interdum imperdiet. Donec maximus dictum elit condimentum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+  <h2>Nossos valores</h2>
+  <p>Nam in dui sit amet magna ornare finibus. Vestibulum at dui aliquet dolor elementum tempus at ac dolor. Etiam ut vestibulum est, a elementum nisi. Nulla at mi quis augue lacinia blandit et et ligula. Sed imperdiet lorem quis hendrerit sodales. Nunc fermentum magna eget nulla euismod tincidunt. Nulla porttitor enim ultricies bibendum fermentum.</p>
+</template>
+
+<template name="cabecalho">
+  <a href="/">Inicio</a>
+  <a href="/sobre">Sobre</a>
+</template>
+
+<template name="LayoutPrincipal">
+  {{> cabecalho}}
+  {{> Template.dynamic template=main}}
 </template>
